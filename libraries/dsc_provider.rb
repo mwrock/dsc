@@ -51,7 +51,7 @@ class DscProvider < Chef::Provider
     native_resource['Properties'].each { |property_data| @property_map.store(property_data['Name'].downcase, property_data) }
 
     @normalized_properties = get_normalized_properties!
-    @resource_converged = ! run_configuration(:test)
+    #@resource_converged = ! run_configuration(:test)
   end
 
   def whyrun_supported?
